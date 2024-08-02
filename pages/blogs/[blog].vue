@@ -13,9 +13,7 @@ const data = computed<BlogPost>(() => {
   return {
     title: articles.value?.title || 'no-title available',
     description: articles.value?.description || 'no-description available',
-    image: articles.value?.image || '/not-found.jpg',
     alt: articles.value?.alt || 'no alter data available',
-    ogImage: articles.value?.ogImage || '/not-found.jpg',
     date: articles.value?.date || 'not-date-available',
     tags: articles.value?.tags || [],
     published: articles.value?.published || false,
@@ -45,10 +43,6 @@ useHead({
       property: 'og:description',
       content: data.value.description,
     },
-    {
-      property: 'og:image',
-      content: data.value.ogImage || data.value.image,
-    },
     // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
     { name: 'twitter:site', content: '@qdnvubp' },
     { name: 'twitter:card', content: 'summary_large_image' },
@@ -64,10 +58,6 @@ useHead({
       name: 'twitter:description',
       content: data.value.description,
     },
-    {
-      name: 'twitter:image',
-      content: data.value.ogImage || data.value.image,
-    },
   ],
   link: [
     {
@@ -76,15 +66,6 @@ useHead({
     },
   ],
 })
-
-// Generate OG Image
-defineOgImageComponent('Test', {
-  headline: 'Greetings 👋',
-  title: data.value.title || '',
-  description: data.value.description || '',
-  link: data.value.ogImage,
-
-})
 </script>
 
 <template>
@@ -92,7 +73,6 @@ defineOgImageComponent('Test', {
     <div class="col-span-12 lg:col-span-9">
       <BlogHeader
         :title="data.title"
-        :image="data.image"
         :alt="data.alt"
         :date="data.date"
         :description="data.description"

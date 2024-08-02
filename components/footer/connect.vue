@@ -7,9 +7,6 @@ import { footerData, seoData } from '~/data'
     <p class="text-black dark:text-zinc-300   text-base font-semibold">
       Connect With Me
     </p>
-    <p class="dark:text-zinc-300  ">
-      {{ footerData.authorInterest }}
-    </p>
 
     <a
       :href="`mailto: ${seoData.mailAddress}`"

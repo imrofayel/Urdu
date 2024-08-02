@@ -11,9 +11,7 @@ const formattedData = computed(() => {
       path: articles._path,
       title: articles.title || 'no-title available',
       description: articles.description || 'no-description available',
-      image: articles.image || '/not-found.jpg',
       alt: articles.alt || 'no alter data available',
-      ogImage: articles.ogImage || '/not-found.jpg',
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
@@ -67,15 +65,6 @@ useHead({
   ],
 })
 
-// Generate OG Image
-const siteData = useSiteConfig()
-defineOgImage({
-  props: {
-    title: 'Archive',
-    description: 'Here you will find all the blog posts I have written & published on this site.',
-    siteName: siteData.url,
-  },
-})
 </script>
 
 <template>
@@ -99,9 +88,7 @@ defineOgImage({
             :title="post.title"
             :date="post.date"
             :description="post.description"
-            :image="post.image"
             :alt="post.alt"
-            :og-image="post.ogImage"
             :tags="post.tags"
             :published="post.published"
           />
@@ -110,7 +97,6 @@ defineOgImage({
         <ArchiveCard
           v-if="paginatedData.length <= 0"
           title="No Post Found"
-          image="/not-found.jpg"
         />
       </div>
 

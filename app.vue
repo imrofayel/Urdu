@@ -4,13 +4,14 @@ import { siteMetaData } from './data'
 useHead({
   htmlAttrs: {
     lang: 'en',
+    dir: 'rtl',
   },
   meta: () => siteMetaData,
 })
 </script>
 
 <template>
-  <div class="bg-[#F1F2F4] dark:text-zinc-300   dark:bg-slate-950">
+  <div class="bg-[#ffffff] dark:text-zinc-300   dark:bg-slate-950">
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />

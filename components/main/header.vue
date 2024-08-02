@@ -8,10 +8,10 @@ function onClick(val: string) {
 </script>
 
 <template>
-  <div class="py-5 border-b dark:border-gray-800  font-semibold">
+  <div class="py-5 border-b dark:border-gray-800 bg-transparent">
     <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline ">
       <ul class="flex items-baseline space-x-5">
-        <li class="text-base sm:text-2xl font-bold">
+        <li class="text-2xl sm:text-4xl">
           <NuxtLink to="/">
             {{ navbarData.homeTitle }}
           </NuxtLink>

@@ -24,9 +24,7 @@ const formattedData = computed(() => {
       path: articles._path,
       title: articles.title || 'no-title available',
       description: articles.description || 'no-description available',
-      image: articles.image || '/blogs-img/blog.jpg',
       alt: articles.alt || 'no alter data available',
-      ogImage: articles.ogImage || '/blogs-img/blog.jpg',
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
@@ -44,15 +42,6 @@ useHead({
   ],
 })
 
-// Generate OG Image
-const siteData = useSiteConfig()
-defineOgImage({
-  props: {
-    title: category.value?.toUpperCase(),
-    description: `You will find all the ${category.value} related post here`,
-    siteName: siteData.url,
-  },
-})
 </script>
 
 <template>
@@ -66,9 +55,7 @@ defineOgImage({
         :title="post.title"
         :date="post.date"
         :description="post.description"
-        :image="post.image"
         :alt="post.alt"
-        :og-image="post.ogImage"
         :tags="post.tags"
         :published="post.published"
       />

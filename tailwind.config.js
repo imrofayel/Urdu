@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         spacegrotesk: ['Space Grotesk', 'sans-serif'],
+        nastaleeq: ['Jameel Noori Nastaleeq', 'sans-serif']
       },
     },
   },
