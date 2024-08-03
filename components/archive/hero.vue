@@ -9,12 +9,11 @@ import { blogsPage } from '~/data'
         <h1 class="text-black dark:text-zinc-300 font-semibold leading-tight text-4xl md:text-5xl my-5">
           {{ blogsPage.title }}
         </h1>
-        <p class="dark:text-zinc-300">
+        <p class="dark:text-zinc-300" v-if="blogsPage.description.length >= 1">
           {{ blogsPage.description }}
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <LogoDogpow />
       </div>
     </div>
   </div>

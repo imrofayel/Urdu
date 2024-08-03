@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('home', () => queryContent('/blogs').sort({ _id: -1 }).find())
 
-const elementPerPage = ref(5)
+const elementPerPage = ref(8)
 const pageNumber = ref(1)
 const searchTest = ref('')
 
@@ -68,20 +68,20 @@ useHead({
 </script>
 
 <template>
-  <main class="container max-w-5xl mx-auto text-zinc-600">
+  <main class="container max-w-5xl mx-auto">
     <ArchiveHero />
 
-    <div class="px-6">
+    <div class="px-8">
       <input
         v-model="searchTest"
-        placeholder="Search"
+        placeholder="تلاش کریں"
         type="text"
-        class="block w-full bg-[#F1F2F4] dark:bg-slate-900 dark:placeholder-zinc-500 text-zinc-300  rounded-md border-gray-300 dark:border-gray-800 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        class="block w-full text-xl bg-transparent rounded-xl border-[1.5px] border-gray-200 dark:border-gray-900 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
       >
     </div>
 
     <ClientOnly>
-      <div v-auto-animate class="space-y-5 my-5 px-4">
+      <div v-auto-animate class="my-8 px-4 grid grid-cols-3">
         <template v-for="post in paginatedData" :key="post.title">
           <ArchiveCard
             :path="post.path"
@@ -91,12 +91,14 @@ useHead({
             :alt="post.alt"
             :tags="post.tags"
             :published="post.published"
+
+            class="trasform hover:scale-105 duration-300 ease-in-out"
           />
         </template>
 
         <ArchiveCard
           v-if="paginatedData.length <= 0"
-          title="No Post Found"
+          title="کوئی مضمون نہیں مل سکا"
         />
       </div>
 
@@ -107,13 +109,13 @@ useHead({
       </template>
     </ClientOnly>
 
-    <div class="flex justify-center items-center space-x-6 ">
+    <div class="flex space-x-6 font-spacegrotesk text-zinc-900 dark:text-zinc-300" style="direction: ltr;">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
-        <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber > 1 }" />
+        <Icon name="lucide:chevron-left" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber > 1 }" />
       </button>
       <p>{{ pageNumber }} / {{ totalPage }}</p>
       <button :disabled="pageNumber >= totalPage" @click="onNextPageClick">
-        <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber < totalPage }" />
+        <Icon name="lucide:chevron-right" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber < totalPage }" />
       </button>
     </div>
   </main>

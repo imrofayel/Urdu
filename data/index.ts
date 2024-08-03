@@ -13,8 +13,8 @@ export const homePage = {
 }
 
 export const blogsPage = {
-  title: 'All Blogs',
-  description: 'Here you will find all the blog posts I have written & published on this site.',
+  title: 'تمام مضامین',
+  description: '',
 }
 
 export const categoryPage = {

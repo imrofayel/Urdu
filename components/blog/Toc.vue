@@ -6,14 +6,18 @@ const links = articles?.body?.toc?.links || []
 </script>
 
 <template>
-  <div class="lg:col-span-3 sticky top-28 h-96  hidden lg:block  justify-self-end">
-    <div class="border dark:border-gray-800 p-3 rounded-md min-w-[200px] dark:bg-slate-900">
-      <h1 class="text-sm font-bold mb-3 border-b dark:border-gray-800 pb-2">
-        Table Of Content
+  <div class="lg:col-span-3 fixed hidden lg:block justify-self-end" style="direction: rtl;">
+    <div
+      class="mt-8 p-3 rounded-xl min-w-[230px] max-h-[430px] overflow-auto scrollbar-hidden"
+    >
+      <h1 class="text-[24px] pb-4" style="direction: rtl;">
+        فہرست
       </h1>
       <NuxtLink
-        v-for="link in links" :key="link.id" :to="`#${link.id}`"
-        class="block text-xs mb-3 hover:underline"
+        v-for="link in links"
+        :key="link.id"
+        :to="`#${link.id}`"
+        class="block text-[20px] mb-4 hover:underline" style="direction: rtl;"
       >
         {{ link.text }}
       </NuxtLink>

@@ -8,7 +8,7 @@ function onClick(val: string) {
 </script>
 
 <template>
-  <div class="py-5 border-b dark:border-gray-800 bg-transparent">
+  <div class="py-5">
     <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline ">
       <ul class="flex items-baseline space-x-5">
         <li class="text-2xl sm:text-4xl">
@@ -17,47 +17,49 @@ function onClick(val: string) {
           </NuxtLink>
         </li>
       </ul>
-      <ul class="flex items-center space-x-3 sm:space-x-6 text-sm sm:text-lg">
-        <li>
-          <NuxtLink to="/blogs">
-            Blogs
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/categories">
-            Categories
-          </NuxtLink>
-        </li>
-        <li title="About Me">
-          <NuxtLink to="/about" aria-label="About me">
-            About
-          </NuxtLink>
-        </li>
+
+      <ul class="flex items-center space-x-4 sm:space-x-6 text-xl" style="direction: ltr;">
+
         <li>
           <ClientOnly>
             <button
               v-if="colorMode.value === 'light'"
               name="light-mode"
               title="Light"
-              class="hover:scale-110 transition-all ease-out hover:cursor-pointer"
+              class="hover:scale-110 transition-all ease-in-out duration-300"
               @click="onClick('dark')"
             >
-              <Icon name="icon-park:moon" size="20" />
+              <Icon name="lucide:moon" size="23" />
             </button>
             <button
               v-if="colorMode.value === 'dark'"
               name="dark-mode"
               title="Dark"
-              class="hover:scale-110 transition-all ease-out hover:cursor-pointer"
+              class="hover:scale-110 transition-all ease-in-out duration-300"
               @click="onClick('light')"
             >
-              <Icon name="noto:sun" size="20" />
+              <Icon name="lucide:sun" size="23" />
             </button>
-            <template #fallback>
-              <!-- this will be rendered on server side -->
-              <Icon name="svg-spinners:180-ring" size="20" />
-            </template>
           </ClientOnly>
+        </li>
+
+        <li>
+          
+          <NuxtLink to="/categories" aria-label="science">
+            <ElementsButton label="سائنس"/>
+          </NuxtLink>
+        </li>
+
+        <li>
+          <NuxtLink to="/categories" aria-label="tech">
+            <ElementsButton label="ٹیکنالوجی"/>
+          </NuxtLink>
+        </li>
+
+        <li>
+          <NuxtLink to="/categories" aria-label="history">
+            <ElementsButton label="تاریخ"/>
+          </NuxtLink>
         </li>
       </ul>
     </div>

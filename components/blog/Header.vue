@@ -1,18 +1,16 @@
 <script setup lang="ts">
 interface Props {
   title: string
-  image: string
-  alt: string
   description: string
+  author: string
   date: string
   tags: Array<string>
 }
 
 withDefaults(defineProps<Props>(), {
   title: 'no-title',
-  image: '#',
-  alt: 'no-img',
   description: 'no description',
+  author: 'مصنف',
   date: 'no-date',
   tags: () => ([]),
 })
@@ -20,28 +18,22 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <header>
-    <h1 class="text-xl dark:text-zinc-300 md:text-3xl lg:text-4xl m-7 font-bold text-center">
+    <h1 class="dark:text-zinc-300 text-4xl m-7">
       {{ title || '' }}
     </h1>
-    <NuxtImg
-      :src="image || ''"
-      :alt="alt || ''"
-      width="600"
-      class="m-auto rounded-2xl shadow-lg h-32 md:h-72 w-4/6 md:w-4/5 content-center object-cover"
-    />
-    <p class="text-xs sm:text-sm my-3 max-w-xl mx-auto text-center text-zinc-600 dark:text-zinc-400">
+    <p class="text-[22px] pr-8 text-black/90 dark:text-white/90">
       {{ description }}
     </p>
-    <div class="flex w-full justify-center text-xs md:text-base my-8">
-      <div class="md:flex text-black dark:text-zinc-300 content-center gap-8 text-xs sm:text-sm">
-        <div class="flex items-center font-semibold">
-          <LogoDate />
-          <p>{{ date || '' }}</p>
-        </div>
+    <div class="flex w-full text-lg my-4">
+      <div class="flex text-black dark:text-zinc-300 content-center gap-4">
+
         <div class="flex items-center gap-2 flex-wrap my-5">
-          <LogoTag />
+            <span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ author }}</span>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap my-5">
           <template v-for="tag in tags" :key="tag">
-            <span class="bg-gray-200 dark:bg-slate-900 rounded-md px-2 py-1 font-semibold">{{ tag }}</span>
+            <span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ tag }}</span>
           </template>
         </div>
       </div>

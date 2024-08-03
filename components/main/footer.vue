@@ -2,15 +2,9 @@
 </script>
 
 <template>
-  <div class="py-5 border-t dark:border-gray-800  mt-5 text-zinc-700 dark:text-zinc-300">
+  <div class="py-5 mt-5 text-zinc-900 dark:text-zinc-300">
     <div class="px-6 container max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3">
-        <FooterDeveloper/>
-        <FooterLink />
-        <FooterConnect />
-      </div>
-
-      <div class="border-t dark:border-gray-800 mt-5 text-center p-2 font-spacegrotesk" style="direction: ltr">© 2024 Adam Rofayel.</div>
+      <div class="mt-5 text-center p-2 space-x-1 font-spacegrotesk" style="direction: ltr"><div class="inline">© 2024 Adam Rofayel.</div><svg xmlns="http://www.w3.org/2000/svg" width="1.3em" viewBox="0 0 24 24" class="inline relative -top-[2px] transform hover:scale-125 ease-in-out duration-300"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"></path></svg></div>
     </div>
   </div>
 </template>

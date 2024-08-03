@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     '@nuxtjs/tailwindcss',
     '@stefanobartoletti/nuxt-social-share',
-    "@nuxthq/studio"
+    "@nuxthq/studio",
   ],
 
   content: {

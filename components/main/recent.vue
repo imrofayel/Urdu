@@ -49,6 +49,8 @@ useHead({
           :alt="post.alt"
           :tags="post.tags"
           :published="post.published"
+
+          class="trasform hover:scale-105 duration-300 ease-in-out"
         />
       </template>
       <template v-if="data?.length === 0">

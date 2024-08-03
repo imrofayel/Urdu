@@ -1,6 +1,6 @@
 <template>
-  <div class="gd-container font-nastaleeq">
-    <header class="fixed w-full bg-[#F1F2F4] dark:bg-slate-950 z-10">
+  <div class="gd-container font-nastaleeq ">
+    <header class="fixed w-full bg-white dark:bg-[#020617] z-10">
       <MainHeader />
     </header>
     <main>

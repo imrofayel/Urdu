@@ -13,7 +13,7 @@ const data = computed<BlogPost>(() => {
   return {
     title: articles.value?.title || 'no-title available',
     description: articles.value?.description || 'no-description available',
-    alt: articles.value?.alt || 'no alter data available',
+    author: articles.value?.author || 'مصنف',
     date: articles.value?.date || 'not-date-available',
     tags: articles.value?.tags || [],
     published: articles.value?.published || false,
@@ -69,18 +69,18 @@ useHead({
 </script>
 
 <template>
-  <div class="px-6 container max-w-5xl mx-auto sm:grid grid-cols-12 gap-x-12 ">
-    <div class="col-span-12 lg:col-span-9">
+  <div class="px-8 container max-w-6xl mx-auto sm:grid grid-cols-12 gap-x-12" style="direction: ltr;">
+    <div class="col-span-12 lg:col-span-9" style="direction: rtl;">
       <BlogHeader
         :title="data.title"
-        :alt="data.alt"
         :date="data.date"
+        :author="data.author"
         :description="data.description"
         :tags="data.tags"
       />
       <div
-        class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-sm sm:prose-base md:prose-lg
-        prose-h1:no-underline max-w-5xl mx-auto prose-zinc dark:prose-invert prose-img:rounded-lg"
+        class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-p:text-[22px] prose-p:text-black/90 dark:prose-p:text-white/90
+        prose-h1:text-4xl prose-h1:font-normal max-w-5xl mx-auto prose-neutral dark:prose-invert prose-p:text-justify prose-p:leading-loose prose-headings:text-3xl prose-headings:no-underline"
       >
         <ContentRenderer v-if="articles" :value="articles">
           <template #empty>
@@ -90,17 +90,5 @@ useHead({
       </div>
     </div>
     <BlogToc />
-
-    <div class="flex mt-10 flex-row gap-2">
-      <SocialShare
-        v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
-        :key="network"
-        aria-label="Share with {network}"
-        :network="network"
-        :styled="true"
-        :label="true"
-        class="p-1"
-      />
-    </div>
   </div>
 </template>
