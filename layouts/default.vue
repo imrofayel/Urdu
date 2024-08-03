@@ -1,5 +1,5 @@
 <template>
-  <div class="gd-container" style="font-family: 'Mehr';">
+  <div class="gd-container font-mehr">
     <header class="fixed w-full bg-white dark:bg-gray-950 z-10">
       <MainHeader />
     </header>
