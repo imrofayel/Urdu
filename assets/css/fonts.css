@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Mehr Nastaliq';
+    src: url('/fonts/Mehr Nastaliq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jameel Noori Nastaliq';
+    src: url('/fonts/Jameel Noori Nastaleeq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+  

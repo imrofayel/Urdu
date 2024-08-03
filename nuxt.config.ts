@@ -57,6 +57,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@stefanobartoletti/nuxt-social-share',
     "@nuxthq/studio",
+    "@nuxt/fonts"
   ],
 
   content: {
@@ -68,4 +69,8 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+
+  css: [
+    '/assets/css/fonts.css'
+  ]
 })
