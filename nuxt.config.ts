@@ -72,5 +72,11 @@ export default defineNuxtConfig({
 
   css: [
     '/assets/css/fonts.css'
-  ]
+  ],
+
+  fonts: {
+    families: [
+      { name : 'Mehr', src: '~/fonts/Mehr_Nastaliq.ttf'}
+    ]
+  }
 })
