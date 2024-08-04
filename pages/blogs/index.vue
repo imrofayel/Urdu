@@ -70,6 +70,15 @@ const search  = ref('')
 
 const results = await searchContent(search)
 
+function getHighlightedText(content: string, match: any): string {
+  const term = Object.keys(match)[0]
+  const startIndex = content.toLowerCase().indexOf(term.toLowerCase())
+  const snippetStart = Math.max(startIndex - 30, 0)
+  const snippetEnd = Math.min(startIndex + 30 + term.length, content.length)
+
+  return content.substring(snippetStart, snippetEnd)
+}
+
 </script>
 
 <template>
@@ -84,11 +93,32 @@ const results = await searchContent(search)
         class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-800 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
       >
 
-      <pre>{{ results }}</pre>
+      <div class="search-results">
+
+    <div v-if="results.length > 0">
+      <div
+        v-for="result in results"
+        :key="result.id"
+        class="result-item border-b py-4"
+      >
+        <h3 class="text-lg font-bold">
+          <a :href="result.id" class="text-blue-500 hover:underline">{{ result.title }}</a>
+        </h3>
+        <p class="text-sm text-gray-600">
+          ...{{ getHighlightedText(result.content, result.match) }}...
+        </p>
+        <p class="text-xs text-gray-500">{{ result.id }}</p>
+      </div>
+    </div>
+    <div v-else>
+      <p>No results found</p>
+    </div>
+  </div>
+
     </div>
 
     <ClientOnly>
-      <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" v-if="results.length < 1">
         <template v-for="post in paginatedData" :key="post.title">
           <ArchiveCard
             :path="post.path"
