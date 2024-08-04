@@ -3,6 +3,7 @@ const { data } = await useAsyncData('home', () => queryContent('/blogs').sort({ 
 
 const elementPerPage = ref(8)
 const pageNumber = ref(1)
+
 const searchTest = ref('')
 
 const formattedData = computed(() => {
@@ -65,6 +66,10 @@ useHead({
   ],
 })
 
+const search  = ref('')
+
+const results = await searchContent(search)
+
 </script>
 
 <template>
@@ -73,11 +78,13 @@ useHead({
 
     <div class="px-8">
       <input
-        v-model="searchTest"
+        v-model="search"
         placeholder="تلاش کریں"
         type="text"
         class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-800 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
       >
+
+      <pre>{{ results }}</pre>
     </div>
 
     <ClientOnly>

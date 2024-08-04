@@ -29,6 +29,8 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  ssr: false,
+
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -64,6 +66,12 @@ export default defineNuxtConfig({
     highlight: {
       theme: 'dracula',
     },
+
+    experimental: {
+      search: {
+        indexed: true
+      }
+    }
   },
 
   devtools: {
@@ -73,4 +81,6 @@ export default defineNuxtConfig({
   css: [
     'assets/css/fonts.css'
   ],
+
+  compatibilityDate: '2024-08-04',
 })
