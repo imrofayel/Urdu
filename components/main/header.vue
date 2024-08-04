@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { navbarData } from '../../data'
 
-const colorMode = useColorMode()
-function onClick(val: string) {
-  colorMode.preference = val
-}
+
 </script>
 
 <template>
@@ -21,26 +18,6 @@ function onClick(val: string) {
       <ul class="flex items-center space-x-4 sm:space-x-6 text-xl" style="direction: ltr;">
 
         <li>
-          <ClientOnly>
-            <button
-              v-if="colorMode.value === 'light'"
-              name="light-mode"
-              title="Light"
-              class="hover:scale-110 transition-all ease-in-out duration-300"
-              @click="onClick('dark')"
-            >
-              <Icon name="lucide:moon" size="23" />
-            </button>
-            <button
-              v-if="colorMode.value === 'dark'"
-              name="dark-mode"
-              title="Dark"
-              class="hover:scale-110 transition-all ease-in-out duration-300"
-              @click="onClick('light')"
-            >
-              <Icon name="lucide:sun" size="23" />
-            </button>
-          </ClientOnly>
         </li>
 
         <li>

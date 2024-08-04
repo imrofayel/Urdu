@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        spacegrotesk: ['Space Grotesk', 'sans-serif'],
+        Inter: ['Inter'],
         notoNastaleeq: ['Noto Nastaliq Urdu', 'sans-serif'],
         mehr: ['Mehr', 'sans-serif']
       },
