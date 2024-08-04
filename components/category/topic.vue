@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { makeFirstCharUpper } from '@/utils/helper'
 
 const route = useRoute()
 
@@ -11,16 +10,21 @@ const category = computed(() => {
   if (Array.isArray(name))
     strName = name.at(0) || ''
   else strName = name
-  return makeFirstCharUpper(strName)
+  return strName
 })
+
+const { data } = await useAsyncData(`category-data-${category.value}`, () =>
+  queryContent('/blogs')
+    .where({ tags: { $contains: category.value } })
+    .find(),
+)
+
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <div class="p-6 my-4 mx-2 rounded-md bg-gray-200 dark:bg-slate-900">
-      <h1 class="text-black dark:text-white font-semibold leading-tight text-xl md:text-2xl">
-        #{{ category }}
-      </h1>
+  <div>
+      <div class="p-6 my-4 mx-2 text-2xl md:text-3xl text-zinc-900 dark:text-zinc-300"><div class="inline">{{ category }} &ensp;&ensp;</div>
+      <span class="inline-flex relative -top-[9px] text-[22px]">{{ data?.length }}</span>
     </div>
   </div>
 </template>

@@ -21,21 +21,8 @@ import { navbarData } from '../../data'
         </li>
 
         <li>
-          
           <NuxtLink to="/categories" aria-label="science">
-            <ElementsButton label="سائنس"/>
-          </NuxtLink>
-        </li>
-
-        <li>
-          <NuxtLink to="/categories" aria-label="tech">
-            <ElementsButton label="ٹیکنالوجی"/>
-          </NuxtLink>
-        </li>
-
-        <li>
-          <NuxtLink to="/categories" aria-label="history">
-            <ElementsButton label="تاریخ"/>
+            <ElementsButton label="زمرہ جات"/>
           </NuxtLink>
         </li>
       </ul>

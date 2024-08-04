@@ -24,7 +24,6 @@ const formattedData = computed(() => {
       path: articles._path,
       title: articles.title || 'no-title available',
       description: articles.description || 'no-description available',
-      alt: articles.alt || 'no alter data available',
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
@@ -55,9 +54,10 @@ useHead({
         :title="post.title"
         :date="post.date"
         :description="post.description"
-        :alt="post.alt"
         :tags="post.tags"
         :published="post.published"
+
+        class="trasform hover:scale-105 duration-300 ease-in-out"
       />
       <BlogEmpty v-if="data?.length === 0" />
     </div>

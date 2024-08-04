@@ -20,6 +20,7 @@
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@primevue/nuxt-module": "^4.0.4",
     "@stefanobartoletti/nuxt-social-share": "^0.6.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",

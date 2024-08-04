@@ -31,15 +31,15 @@ useHead({
 </script>
 
 <template>
-  <main class="container max-w-5xl mx-auto text-zinc-600">
+  <main class="container mx-auto text-zinc-600">
     <CategoryHero />
-    <div class="flex flex-wrap px-6 mt-12 gap-3">
+    <div class="flex flex-wrap px-6 mt-6 gap-3">
       <CategoryCard
         v-for="topic in allTags"
         :key="topic[0]"
         :title="makeFirstCharUpper(topic[0])"
         :count="topic[1]"
-      />
+      /> 
     </div>
   </main>
 </template>

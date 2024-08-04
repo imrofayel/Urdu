@@ -33,7 +33,7 @@ withDefaults(defineProps<Props>(), {
 
         <div class="flex items-center gap-2 flex-wrap my-5">
           <template v-for="tag in tags" :key="tag">
-            <span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ tag }}</span>
+            <NuxtLink :to="`/categories/${tag.toLocaleLowerCase()}`"><span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ tag }}</span></NuxtLink>
           </template>
         </div>
       </div>

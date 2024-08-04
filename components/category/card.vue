@@ -10,42 +10,39 @@ withDefaults(defineProps<Props>(), {
 })
 
 // some random color for tags
-const color = [
-  '#dc2626',
-  '#d97706',
-  '#65a30d',
-  '#059669',
-  '#0891b2',
-  '#0284c7',
-  '#4f46e5',
-  '#7c3aed',
-  '#c026d3',
-  '#db2777',
-]
+const colors = [
+  { bg: '#E3F2FD', text: '#1565C0' },
+  { bg: '#FFFDE7', text: '#F9A825' },
+  { bg: '#FBE9E7', text: '#D84315' },
+  { bg: '#F3E5F5', text: '#6A1B9A' },
+  { bg: '#EDE7F6', text: '#4527A0' },
+  { bg: '#F3E5F5', text: '#C62828' },
+  { bg: '#E8F5E9', text: '#2E7D32' }
+];
 
-// get a random number
+// Function to get a random index
 function getRandomInt(min: number, max: number) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const picAColor = ref(`${color.at(getRandomInt(0, 8))}`)
+// Select a random color
+const randomColor = colors[getRandomInt(0, colors.length - 1)];
+const picAColor = ref(randomColor);
+
 </script>
 
 <template>
   <div
-    class="text-[#F1F2F4]  px-5 py-3 rounded hover:underline
-    rand-bg-color hover:scale-[1.05] transition-all duration-500"
+    class="text-white px-2 rounded-3xl hover:scale-110 ease-in-out duration-300" :style="{ backgroundColor: picAColor.bg, color: picAColor.text }"
   >
-    <NuxtLink :to="`/categories/${title.toLocaleLowerCase()}`" class="text-lg font-extrabold">
-      <h1>#{{ title }}({{ count }})</h1>
+    <NuxtLink :to="`/categories/${title.toLocaleLowerCase()}`" class="text-lg">
+      <div class="space-x-4 p-1" style="direction: ltr;"><div class="inline font-Inter"> {{ count }}</div><div class="inline">{{ title }}</div></div>
     </NuxtLink>
   </div>
 </template>
 
 <style scoped>
-.rand-bg-color {
-  background-color: v-bind(picAColor);
-}
+
 </style>

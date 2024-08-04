@@ -76,19 +76,18 @@ useHead({
         v-model="searchTest"
         placeholder="تلاش کریں"
         type="text"
-        class="block w-full text-xl bg-transparent rounded-xl border-[1.5px] border-gray-200 dark:border-gray-900 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-800 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
       >
     </div>
 
     <ClientOnly>
-      <div v-auto-animate class="my-8 px-4 grid grid-cols-3">
+      <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <template v-for="post in paginatedData" :key="post.title">
           <ArchiveCard
             :path="post.path"
             :title="post.title"
             :date="post.date"
             :description="post.description"
-            :alt="post.alt"
             :tags="post.tags"
             :published="post.published"
 
@@ -99,6 +98,8 @@ useHead({
         <ArchiveCard
           v-if="paginatedData.length <= 0"
           title="کوئی مضمون نہیں مل سکا"
+          date=""
+          description=""
         />
       </div>
 
@@ -109,7 +110,7 @@ useHead({
       </template>
     </ClientOnly>
 
-    <div class="flex space-x-6 font-spacegrotesk text-zinc-900 dark:text-zinc-300" style="direction: ltr;">
+    <div class="flex space-x-6 font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
         <Icon name="lucide:chevron-left" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber > 1 }" />
       </button>

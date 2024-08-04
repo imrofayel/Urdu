@@ -18,8 +18,8 @@ export const blogsPage = {
 }
 
 export const categoryPage = {
-  title: 'Categories',
-  description: 'Blow this category is generated from all the tags are mentioned in the different blog post',
+  title: 'زمرہ جات',
+  description: '',
 }
 
 export const aboutPage = {

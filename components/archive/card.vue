@@ -4,7 +4,6 @@ interface Props {
   title?: string
   date?: string
   description?: string
-  alt?: string
   tags?: Array<string>
   published?: boolean
 }
@@ -14,25 +13,19 @@ withDefaults(defineProps<Props>(), {
   title: 'no-title',
   date: 'no-date',
   description: 'no-description',
-  alt: 'no-alt',
   tags: () => [],
   published: false,
 })
 </script>
 
 <template>
-  <article class="group border-[1.5px] border-gray-200 dark:border-gray-900 m-2 overflow-hidden rounded-2xl shadow-sm text-zinc-700 dark:text-zinc-300">
+  <article class="group border-[1.5px] border-gray-200 dark:border-gray-900 m-2 overflow-hidden rounded-2xl shadow-sm text-zinc-900 dark:text-zinc-300">
     <NuxtLink :to="path">
-      <div class="px-3 pb-4 space-y-3">
-        <div class="text-black dark:text-zinc-300 pt-3 pb-2 space-y-3">
-          <div class="flex items-center">
-            {{ date }}
-          </div>
-        </div>
+      <div class="space-y-3 p-6">
         <h2 class="text-xl text-black dark:text-zinc-300 pb-1">
           {{ title }}
         </h2>
-        <p class="text-ellipsis line-clamp-2 text-base">
+        <p class="text-ellipsis line-clamp-3 text-lg leading-loose">
           {{ description }}
         </p>
       </div>

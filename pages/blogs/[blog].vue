@@ -111,6 +111,7 @@ useHead({
   font-weight: normal;
   background-color: #f9f9f9d8; /* Light mode background */
   border: 1px solid #f7f7f7;
+  font-size: 22px
 }
 
 .prose th {
