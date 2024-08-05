@@ -77,7 +77,7 @@ function readFullArticle() {
 </script>
 
 <template>
-  <div class="px-8 container md:max-w-5xl mx-auto mr-0 sm:grid grid-cols-12 gap-x-12" style="direction: ltr;">
+  <div class="px-8 container md:max-w-5xl md:mx-auto mr-0 sm:grid grid-cols-12 gap-x-12" style="direction: ltr;">
     <div class="col-span-12 lg:col-span-9" style="direction: rtl;">
       <BlogHeader
         :title="data.title"
@@ -86,7 +86,7 @@ function readFullArticle() {
         :description="data.description"
         :tags="data.tags"
 
-        class="mb-10"
+        class="my-8"
       />
 
       <!-- <button
