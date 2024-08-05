@@ -77,7 +77,7 @@ function readFullArticle() {
 </script>
 
 <template>
-  <div class="px-8 container max-w-6xl mx-auto sm:grid grid-cols-12 gap-x-12" style="direction: ltr;">
+  <div class="px-8 container md:max-w-5xl mx-auto mr-0 sm:grid grid-cols-12 gap-x-12" style="direction: ltr;">
     <div class="col-span-12 lg:col-span-9" style="direction: rtl;">
       <BlogHeader
         :title="data.title"
@@ -107,7 +107,7 @@ function readFullArticle() {
 
       <div
         class="article-content prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-p:text-[22px] prose-p:text-black/90 dark:prose-p:text-white/90
-        prose-h1:text-4xl prose-h1:font-normal max-w-5xl mx-auto prose-neutral dark:prose-invert prose-p:text-justify prose-p:leading-loose prose-headings:text-3xl prose-headings:no-underline prose-table:text-[22px] prose-table:text-black/90 dark:prose-table:text-white/90 prose-td:font-normal prose-tr:font-normal prose-table:font-normal prose-thead:text-[24px], prose-thead:font-normal dark:prose-table:bg-slate-800 prose-table:w-full sm:prose-table:w-[60%]"
+        prose-h1:text-4xl prose-h1:font-normal max-w-5xl mx-auto prose-neutral dark:prose-invert prose-p:text-justify prose-p:leading-loose prose-headings:text-3xl prose-headings:no-underline prose-table:text-[22px] prose-table:text-black/90 dark:prose-table:text-white/90 prose-td:font-normal prose-tr:font-normal prose-table:font-normal prose-thead:text-[24px], prose-thead:font-normal dark:prose-table:bg-slate-800 prose-table:w-full sm:prose-table:w-[70%]"
       >
         <ContentRenderer v-if="articles" :value="articles">
           <template #empty>
@@ -115,6 +115,13 @@ function readFullArticle() {
           </template>
         </ContentRenderer>
       </div>
+      
+      <div class="flex items-center flex-wrap">
+        <template v-for="tag in data.tags" :key="tag">
+          <NuxtLink :to="`/categories/${tag.toLocaleLowerCase()}`"><span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ tag }}</span></NuxtLink>
+        </template>
+      </div>
+      
     </div>
     <BlogToc />
   </div>

@@ -48,7 +48,7 @@ function typeUrdu(type: string){
 
 <template>
 
-<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl pr-8 pt-3 pl-8 my-4 mx-1 md:ml-52">
+<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl pr-8 pt-3 pl-8 my-4 md:mx-8">
 
   <div>
     <icon
@@ -103,7 +103,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--warning p, h1, h2, h3, h4, h6 table {
-  color: #FBC02D;
+  color: #fabb1b;
 }
 
 .dark .prosed--warning p, h1, h2, h3, h4, h6 table {
@@ -113,7 +113,7 @@ function typeUrdu(type: string){
 .light--success {
   color: #00C853;
   background-color: #E8F5E9;
-  border: 1px solid #E8F5E9;
+  border: 1px solid #C8E6C9;
 }
 
 .dark--success {
@@ -133,7 +133,7 @@ function typeUrdu(type: string){
 .light--danger {
   color: #D32F2F;
   background-color: #FFEBEE;
-  border: 1px solid #FFEBEE;
+  border: 1px solid #FFCDD2;
 }
 
 .dark--danger {
