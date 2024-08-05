@@ -10,7 +10,7 @@ const links = articles?.body?.toc?.links || []
     <div
       class="mt-8 p-3 rounded-xl min-w-[230px] max-h-[430px] overflow-auto scrollbar-hidden"
     >
-      <h1 class="text-[24px] pb-4" style="direction: rtl;">
+      <h1 class="text-[24px] pb-4 text-zinc-900 dark:text-zinc-300" style="direction: rtl;">
         فہرست
       </h1>
       <NuxtLink

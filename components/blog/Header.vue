@@ -18,7 +18,7 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <header>
-    <h1 class="dark:text-zinc-300 text-4xl m-7">
+    <h1 class="text-black dark:text-zinc-300 text-4xl m-7">
       {{ title || '' }}
     </h1>
     <p class="text-[22px] pr-8 text-black/90 dark:text-white/90">
