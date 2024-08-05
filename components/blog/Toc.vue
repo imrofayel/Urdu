@@ -14,7 +14,7 @@ const links = articles?.body?.toc?.links || []
         فہرست
       </h1>
 
-      <hr class="border-t dark:border-[#0c1024] mb-6">
+      <hr class="border-t dark:border-[#111324] mb-6">
       
       <NuxtLink
         v-for="link in links"
