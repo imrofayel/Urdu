@@ -85,9 +85,11 @@ function readFullArticle() {
         :author="data.author"
         :description="data.description"
         :tags="data.tags"
+
+        class="mb-10"
       />
 
-      <button
+      <!-- <button
         @click="readFullArticle"
         class="bg-blue-500 text-white py-2 px-4 rounded mt-4"
 
@@ -103,7 +105,7 @@ function readFullArticle() {
         v-if="isReading"
       >
         Stop
-      </button>
+      </button> -->
 
       <div
         class="article-content prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-p:text-[22px] prose-p:text-black/90 dark:prose-p:text-white/90
@@ -116,12 +118,12 @@ function readFullArticle() {
         </ContentRenderer>
       </div>
       
-      <div class="flex items-center flex-wrap">
+      <div class="flex w-full">
         <template v-for="tag in data.tags" :key="tag">
-          <NuxtLink :to="`/categories/${tag.toLocaleLowerCase()}`"><span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-1 text-[21px]">{{ tag }}</span></NuxtLink>
+          <NuxtLink :to="`/categories/${tag.toLocaleLowerCase()}`" class="pl-3"><span class="bg-gray-200/30 dark:bg-slate-900 rounded-xl px-3 py-0 text-[21px]">{{ tag }}</span></NuxtLink>
         </template>
       </div>
-      
+
     </div>
     <BlogToc />
   </div>
