@@ -8,7 +8,7 @@ const links = articles?.body?.toc?.links || []
 <template>
   <div class="lg:col-span-3 hidden lg:block justify-self-end" style="direction: rtl;">
     <div
-      class="mt-8 p-3 rounded-xl min-w-[230px] scrollbar-hidden"
+      class="mt-8 rounded-xl"
     >
       <h1 class="text-[24px] pb-4 text-zinc-900 dark:text-zinc-300" style="direction: rtl;">
         فہرست

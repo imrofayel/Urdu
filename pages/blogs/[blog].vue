@@ -89,7 +89,7 @@ useHead({
         :description="data.description"
         :tags="data.tags"
 
-        class="my-10"
+        class="mb-8"
       />
 
       <!-- <button

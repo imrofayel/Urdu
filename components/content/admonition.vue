@@ -78,8 +78,8 @@ function typeUrdu(type: string){
 
 .dark--info {
   color: #329fff;
-  background-color: #0e141b;
-  border: 1px solid rgb(49, 49, 49);
+  background-color: rgba(9, 13, 18, 0.297);
+  border: 1px solid rgba(49, 49, 49, 0.185);
 }
 
 .prosed--info p, h1, h2, h3, h4, h6 table {
@@ -98,8 +98,8 @@ function typeUrdu(type: string){
 
 .dark--warning {
   color: #F9A825;
-  background-color: #1c190f;
-  border: 1px solid rgb(49, 32, 1);
+  background-color: #1c190f50;
+  border: 1px solid rgba(49, 32, 1, 0.215);
 }
 
 .prosed--warning p, h1, h2, h3, h4, h6 table {
@@ -118,8 +118,8 @@ function typeUrdu(type: string){
 
 .dark--success {
   color: #54de5a;
-  background-color: #00fa6812;
-  border: 1px solid #00fa6819;
+  background-color: #00461e2a;
+  border: 1px solid #013e1a22;
 }
 
 .prosed--success p, h1, h2, h3, h4, h6 table {
@@ -138,8 +138,8 @@ function typeUrdu(type: string){
 
 .dark--danger {
   color: #fc4444;
-  background-color: #fa000012;
-  border: 1px solid #fa000019;
+  background-color: #5304041b;
+  border: 1px solid #3f010133;
 }
 
 .prosed--danger p, h1, h2, h3, h4, h6 table {

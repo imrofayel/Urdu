@@ -26,7 +26,7 @@ withDefaults(defineProps<Props>(), {
       {{ description }}
     </p>
     
-    <div class="inline-flex w-full my-6 justify-between">
+    <div class="inline-flex w-full my-6 justify-between mt-10">
 
         <div class="text-xl hover:scale-125 transform ease-in-out duration-300 cursor-pointer">
           
