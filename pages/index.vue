@@ -13,7 +13,7 @@ useHead({
 
 <template>
   <main class="container max-w-5xl mx-auto text-zinc-600">
-    <MainHero />
+    <MainHero class="mb-10"/>
     <MainRecent />
   </main>
 </template>
