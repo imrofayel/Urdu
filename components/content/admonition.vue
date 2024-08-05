@@ -48,7 +48,7 @@ function typeUrdu(type: string){
 
 <template>
 
-<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl pr-8 pt-3 pl-8 my-4 md:mx-8">
+<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl px-4 pt-2 my-2 md:mx-8">
 
   <div>
     <icon
