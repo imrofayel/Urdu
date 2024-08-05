@@ -1,5 +1,7 @@
 <script setup lang="ts">
+
 import type { BlogPost } from '@/types/blog'
+
 import { navbarData, seoData } from '~/data'
 
 const { path } = useRoute()
@@ -39,41 +41,42 @@ useHead({
   ],
 })
 
-const fullArticleContent = ref('')
+// const fullArticleContent = ref('')
 
-const isReading = ref(false)
+// const isReading = ref(false)
 
-onMounted(() => {
-  const contentElement = document.querySelector('.article-content')
-  if (contentElement) {
-    fullArticleContent.value = contentElement.textContent || ''
-  }
-})
+// onMounted(() => {
+//   const contentElement = document.querySelector('.article-content')
+//   if (contentElement) {
+//     fullArticleContent.value = contentElement.textContent || ''
+//   }
+// })
 
-function stopReading() {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel()
-    isReading.value = false
-  }
-}
+// function stopReading() {
+//   if ('speechSynthesis' in window) {
+//     window.speechSynthesis.cancel()
+//     isReading.value = false
+//   }
+// }
 
-function readFullArticle() {
-  if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(fullArticleContent.value)
-    utterance.lang = 'ur' // Set the language to Urdu
-    utterance.rate = 1 // Set the speech rate (1 is normal, <1 slower, >1 faster)
+// function readFullArticle() {
+//   if ('speechSynthesis' in window) {
+//     const utterance = new SpeechSynthesisUtterance(fullArticleContent.value)
+//     utterance.lang = 'ur' // Set the language to Urdu
+//     utterance.rate = 1 // Set the speech rate (1 is normal, <1 slower, >1 faster)
 
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel()
+//     // Cancel any ongoing speech
+//     window.speechSynthesis.cancel()
 
-    // Speak the text
-    window.speechSynthesis.speak(utterance)
-  } else {
-    alert('Sorry, your browser does not support text-to-speech.')
-  }
+//     // Speak the text
+//     window.speechSynthesis.speak(utterance)
+//   } else {
+//     alert('Sorry, your browser does not support text-to-speech.')
+//   }
 
-  isReading.value = true
-}
+//   isReading.value = true
+// }
+
 </script>
 
 <template>
