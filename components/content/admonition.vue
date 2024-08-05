@@ -12,10 +12,10 @@ const useIconMap = () => {
 
   // map the type to an icon
   const icons = {
-    warning: 'alert',
-    info: 'info-circle',
-    danger: 'close-octagon',
-    success: 'check-circle'
+    warning: 'message-circle-warning',
+    info: 'info',
+    danger: 'biohazard',
+    success: 'circle-check'
   } as const
 
   // return the icon name
@@ -48,16 +48,20 @@ function typeUrdu(type: string){
 
 <template>
 
-<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl pr-8 p-1 pl-8 m-4">
+<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl pr-8 pt-3 pl-8 my-4 mx-1 md:ml-52">
 
   <div>
     <icon
       :name="`lucide:${getIcon(type)}`"
+      size="23px"
+      class="relative top-1"
     />
 
-    <span class="text-xl">
+    <div class="inline p-1"></div>
+
+    <div class="text-xl inline">
       {{ typeUrdu(type) }}
-    </span>
+    </div>
   </div>
   <slot/>
 </div>
