@@ -71,9 +71,9 @@ function typeUrdu(type: string){
 <style>
 
 .light--info {
-  color: #1e88e5;
-  background-color: #E3F2FD;
-  border: 1px solid #BBDEFB;
+  color: #0561b2;
+  background-color: #e3f2fd2c;
+  border: 1px solid #bbdefb4e;
 }
 
 .dark--info {
@@ -83,7 +83,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--info p, h1, h2, h3, h4, h6 table {
-  color: #1e88e5;
+  color: #0561b2;
 }
 
 .dark .prosed--info p, h1, h2, h3, h4, h6 table {
@@ -91,9 +91,9 @@ function typeUrdu(type: string){
 }
 
 .light--warning {
-  color: #ffc400;
-  background-color: #fff8e1;
-  border: 1px solid #FFECB3;
+  color: #7e6203;
+  background-color: #fff8e14e;
+  border: 1px solid #ffecb357;
 }
 
 .dark--warning {
@@ -103,7 +103,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--warning p, h1, h2, h3, h4, h6 table {
-  color: #ffc400;
+  color: #7e6203;
 }
 
 .dark .prosed--warning p, h1, h2, h3, h4, h6 table {
@@ -111,9 +111,9 @@ function typeUrdu(type: string){
 }
 
 .light--success {
-  color: #00C853;
-  background-color: #E8F5E9;
-  border: 1px solid #C8E6C9;
+  color: #07ac4c;
+  background-color: #e8f5e947;
+  border: 1px solid #c8e6c95a;
 }
 
 .dark--success {
@@ -123,7 +123,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--success p, h1, h2, h3, h4, h6 table {
-  color: #00C853;
+  color: #07ac4c;
 }
 
 .dark .prosed--success p, h1, h2, h3, h4, h6 table {
@@ -131,9 +131,9 @@ function typeUrdu(type: string){
 }
 
 .light--danger {
-  color: #D32F2F;
-  background-color: #FFEBEE;
-  border: 1px solid #FFCDD2;
+  color: #cc0a0a;
+  background-color: #ffebee41;
+  border: 1px solid #ffcdd24c;
 }
 
 .dark--danger {
@@ -143,7 +143,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--danger p, h1, h2, h3, h4, h6 table {
-  color: #D32F2F;
+  color: #cc0a0a;
 }
 
 .dark .prosed--danger p, h1, h2, h3, h4, h6 table {
