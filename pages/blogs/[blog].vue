@@ -138,7 +138,7 @@ useHead({
   border-collapse: separate;
   border-spacing: 0;
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   text-align: right; /* Align text to the right */
 }

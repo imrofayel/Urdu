@@ -56,7 +56,7 @@ withDefaults(defineProps<Props>(), {
       </div>
     </div>
 
-    <hr class="border-t dark:border-[#21243a]">
+    <hr class="border-t dark:border-t-[1.4px] dark:border-[#ffffff46]">
 
   </header>
 </template>

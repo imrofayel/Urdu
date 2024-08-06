@@ -15,7 +15,7 @@ const useIconMap = () => {
     warning: 'message-circle-warning',
     info: 'info',
     danger: 'biohazard',
-    success: 'circle-check'
+    success: 'message-circle-question'
   } as const
 
   // return the icon name
@@ -91,8 +91,8 @@ function typeUrdu(type: string){
 }
 
 .light--warning {
-  color: #ed9803;
-  background-color: #FFF8E1;
+  color: #ffc400;
+  background-color: #fff8e1;
   border: 1px solid #FFECB3;
 }
 
@@ -103,7 +103,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--warning p, h1, h2, h3, h4, h6 table {
-  color: #ed9803;
+  color: #ffc400;
 }
 
 .dark .prosed--warning p, h1, h2, h3, h4, h6 table {
