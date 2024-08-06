@@ -91,7 +91,7 @@ function typeUrdu(type: string){
 }
 
 .light--warning {
-  color: #FFA000;
+  color: #ed9803;
   background-color: #FFF8E1;
   border: 1px solid #FFECB3;
 }
@@ -103,7 +103,7 @@ function typeUrdu(type: string){
 }
 
 .prosed--warning p, h1, h2, h3, h4, h6 table {
-  color: #fabb1b;
+  color: #ed9803;
 }
 
 .dark .prosed--warning p, h1, h2, h3, h4, h6 table {

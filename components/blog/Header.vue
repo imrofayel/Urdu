@@ -19,12 +19,12 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <header>
-    <h1 class="text-black dark:text-zinc-300 text-4xl m-7">
+    <h1 class="text-black dark:text-zinc-300 text-4xl my-7">
       {{ title || '' }}
     </h1>
-    <p class="text-[22px] pr-8 text-black/90 dark:text-white/90 prose-p:leading-loose">
+    <div class="text-[22px] text-black/90 dark:text-white/90 line">
       {{ description }}
-    </p>
+    </div>
     
     <div class="inline-flex w-full my-6 justify-between mt-10">
 
@@ -56,7 +56,15 @@ withDefaults(defineProps<Props>(), {
       </div>
     </div>
 
-    <hr class="border-t dark:border-[#161931]">
+    <hr class="border-t dark:border-[#21243a]">
 
   </header>
 </template>
+
+<style>
+
+.line {
+  line-height: 3rem;
+}
+
+</style>
