@@ -50,7 +50,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image',
     '@vueuse/nuxt',
-    'nuxt-og-image',
     '@nuxt/content',
     '@nuxtjs/robots',
     '@nuxtjs/fontaine',
@@ -76,7 +75,6 @@ export default defineNuxtConfig({
 
     experimental: {
       search: {
-        indexed: true
       }
     }
   },
