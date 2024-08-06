@@ -93,12 +93,12 @@ function typeUrdu(type: string){
 .light--warning {
   color: #7e6203;
   background-color: #fff8e14e;
-  border: 1px solid #ffecb357;
+  border: 1px solid #ffecb38f;
 }
 
 .dark--warning {
   color: #F9A825;
-  background-color: #1c190f50;
+  background-color: #1c190f25;
   border: 1px solid rgba(49, 32, 1, 0.215);
 }
 
@@ -112,13 +112,13 @@ function typeUrdu(type: string){
 
 .light--success {
   color: #07ac4c;
-  background-color: #e8f5e947;
+  background-color: #e8f5e933;
   border: 1px solid #c8e6c95a;
 }
 
 .dark--success {
   color: #54de5a;
-  background-color: #00461e2a;
+  background-color: #00461e18;
   border: 1px solid #013e1a22;
 }
 
@@ -139,7 +139,7 @@ function typeUrdu(type: string){
 .dark--danger {
   color: #fc4444;
   background-color: #5304041b;
-  border: 1px solid #3f010133;
+  border: 1px solid #784a4a1a;
 }
 
 .prosed--danger p, h1, h2, h3, h4, h6 table {
