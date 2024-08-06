@@ -71,18 +71,34 @@ const search  = ref('')
 const results = await searchContent(search)
 
 function getHighlightedText(content: string, match: any): string {
-  const term = Object.keys(match)[0]
-  const startIndex = content.toLowerCase().indexOf(term.toLowerCase())
-  const snippetStart = Math.max(startIndex - 45, 0)
-  const snippetEnd = Math.min(startIndex + 45 + term.length, content.length)
+  const term = Object.keys(match)[0];
+  const lowerContent = content.toLowerCase();
+  const lowerTerm = term.toLowerCase();
+  const startIndex = lowerContent.indexOf(lowerTerm);
+  if (startIndex === -1) return content; // Return original content if term not found
 
-  return content.substring(snippetStart, snippetEnd)
+  const snippetStart = Math.max(startIndex - 45, 0);
+  const snippetEnd = Math.min(startIndex + 45 + term.length, content.length);
+
+  // Extract the snippet from the content
+  const snippet = content.substring(snippetStart, snippetEnd);
+
+  // Replace the matched term with highlighted HTML
+  const highlightedSnippet = snippet.replace(
+    new RegExp(`(${term})`, 'ig'),
+    '<span class="text-blue-600 dark:text-blue-400">$1</span>'
+  );
+
+  return highlightedSnippet;
 }
+
 
 </script>
 
 <template>
+
   <main class="container max-w-5xl mx-auto">
+
     <ArchiveHero />
 
     <div class="px-8">
@@ -106,7 +122,7 @@ function getHighlightedText(content: string, match: any): string {
       
         <NuxtLink :to= result.id><div class="inline-flex transform hover:scale-[1.1] ease-in-out duration-500">
           <div class="text-lg text-zinc-800 dark:text-zinc-200 leading-[2.5rem]">
-            <div class="inline p-1">...</div>{{ getHighlightedText(result.content, result.match) }}<div class="inline p-1">...</div><span class="sm:p-4 p-2 pr-0 block sm:inline">({{ result.title }})</span>
+            <div class="inline p-1">...</div><div class="inline" v-html="getHighlightedText(result.content, result.match)"></div><div class="inline p-1">...</div><span class="sm:p-4 p-2 pr-0 block sm:inline">({{ result.title }})</span>
           </div>
         </div></NuxtLink>
 
@@ -114,7 +130,7 @@ function getHighlightedText(content: string, match: any): string {
 
     </div>
 
-    <div v-else>
+    <div v-else-if="search && results.length < 1">
       <p class="text-lg my-6">کچھ نہیں مل سکا</p>
     </div>
 
@@ -123,7 +139,7 @@ function getHighlightedText(content: string, match: any): string {
     </div>
 
     <ClientOnly>
-      <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" v-if="results.length < 1">
+      <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" v-if="!search && results.length < 1">
         <template v-for="post in paginatedData" :key="post.title">
           <ArchiveCard
             :path="post.path"
@@ -152,7 +168,7 @@ function getHighlightedText(content: string, match: any): string {
       </template>
     </ClientOnly>
 
-    <div class="flex space-x-6 justify-center font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;" v-if="results.length < 1">
+    <div class="flex space-x-6 justify-center font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;" v-if="!search && results.length < 1">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
         <Icon name="lucide:chevron-left" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber > 1 }" />
       </button>

@@ -13,7 +13,7 @@ export const homePage = {
 }
 
 export const blogsPage = {
-  title: 'تمام مضامین',
+  title: 'تلاش',
   description: '',
 }
 
