@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { navbarData } from '../../data'
 
-
 </script>
 
 <template>
   <div class="py-5">
-    <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline ">
+    <div class="flex px-6 justify-between mx-auto items-baseline ">
       <ul class="flex items-baseline space-x-5">
         <li class="text-3xl">
           <NuxtLink to="/">
@@ -17,7 +16,7 @@ import { navbarData } from '../../data'
 
       <ul class="flex items-center space-x-4 sm:space-x-6 text-xl" style="direction: ltr;">
 
-        <div class="rounded-lg bg-slate-300">He</div>
+        <NuxtLink to="/blogs"><div class="transform hover:scale-125 ease-in-out duration-300 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="28" fill="none" viewBox="0 0 24 24" aria-label="Search"><path fill="currentColor" fill-rule="evenodd" d="M4.092 11.06a6.95 6.95 0 1 1 13.9 0 6.95 6.95 0 0 1-13.9 0m6.95-8.05a8.05 8.05 0 1 0 5.13 14.26l3.75 3.75a.56.56 0 1 0 .79-.79l-3.73-3.73A8.05 8.05 0 0 0 11.042 3z" clip-rule="evenodd"></path></svg></div></NuxtLink>
 
       </ul>
     </div>
