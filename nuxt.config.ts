@@ -64,7 +64,14 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: 'dracula',
+      theme: {
+        default: "light-plus",
+        dark: "github-dark",
+      },
+
+      langs: [
+        'c', 'cpp', 'java', 'dart', 'c#', 'py', 'python'
+      ]
     },
 
     experimental: {

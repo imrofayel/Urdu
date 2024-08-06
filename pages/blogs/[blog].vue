@@ -114,6 +114,7 @@ useHead({
         class="article-content prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-p:text-[22px] prose-p:text-black/90 dark:prose-p:text-white/90
         prose-h1:text-4xl prose-h1:font-normal max-w-5xl mx-auto prose-neutral dark:prose-invert prose-p:text-justify prose-p:leading-loose prose-headings:text-3xl prose-headings:no-underline prose-table:text-[22px] prose-table:text-black/90 dark:prose-table:text-white/90 prose-td:font-normal prose-tr:font-normal prose-table:font-normal prose-thead:text-[24px], prose-thead:font-normal prose-table:w-full sm:prose-table:w-[70%]"
       >
+      
         <ContentRenderer v-if="articles" :value="articles">
           <template #empty>
             <p>No content found.</p>
@@ -133,32 +134,29 @@ useHead({
 </template>
 
 <style>
-/* Global CSS file or component-specific CSS */
 .prose table {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid #3d3d3d;
   border-radius: 0px;
   overflow: hidden;
-  text-align: right; /* Align text to the right */
+  text-align: right;
 }
-
 .prose th,
 .prose td {
   padding: 12px 15px;
   border-bottom: normal;
   font-weight: normal;
-  background-color: transparent; /* Light mode background */
+  background-color: transparent;
   border: 1px solid #3d3d3d;
   font-size: 22px;
 }
 
 .prose th {
-  background-color: transparent; /* Light mode header */
+  background-color: transparent;
   font-weight: normal;
 }
 
-/* Dark mode styles */
 .dark .prose table {
   border: 1px solid #c3c3c3d0;
 }
@@ -170,10 +168,11 @@ useHead({
 }
 
 .dark .prose th {
-  background-color: transparent; /* Dark mode header */
+  background-color: transparent;
 }
 
 .dark .prose tr:hover td {
-  background-color: transparent; /* Dark mode hover effect */
+  background-color: transparent;
 }
+
 </style>
