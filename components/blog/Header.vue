@@ -26,7 +26,7 @@ withDefaults(defineProps<Props>(), {
       {{ description }}
     </div>
     
-    <div class="inline-flex w-full my-6 justify-between mt-10">
+    <div class="inline-flex w-full my-2 justify-between mt-10">
 
         <div class="text-xl hover:scale-125 transform ease-in-out duration-300 cursor-pointer">
           
@@ -55,8 +55,6 @@ withDefaults(defineProps<Props>(), {
           </div>
       </div>
     </div>
-
-    <hr class="border-t dark:border-t-[1.4px] dark:border-[#ffffff46]">
 
   </header>
 </template>

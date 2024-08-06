@@ -13,14 +13,12 @@ const links = articles?.body?.toc?.links || []
       <h1 class="text-[24px] pb-4 text-zinc-900 dark:text-zinc-300" style="direction: rtl;">
         فہرست
       </h1>
-
-      <hr class="border-t dark:border-t-[1.4px] dark:border-[#ffffff46] mb-6">
       
       <NuxtLink
         v-for="link in links"
         :key="link.id"
         :to="`#${link.id}`"
-        class="block text-[20px] mb-2 hover:underline" style="direction: rtl;"
+        class="block text-[22px] mb-2 hover:underline" style="direction: rtl;"
       >
         {{ link.text }}
       </NuxtLink>
