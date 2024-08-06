@@ -161,5 +161,6 @@ function getHighlightedText(content: string, match: any): string {
         <Icon name="lucide:chevron-right" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber < totalPage }" />
       </button>
     </div>
+    
   </main>
 </template>
