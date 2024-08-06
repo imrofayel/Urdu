@@ -73,8 +73,8 @@ const results = await searchContent(search)
 function getHighlightedText(content: string, match: any): string {
   const term = Object.keys(match)[0]
   const startIndex = content.toLowerCase().indexOf(term.toLowerCase())
-  const snippetStart = Math.max(startIndex - 30, 0)
-  const snippetEnd = Math.min(startIndex + 30 + term.length, content.length)
+  const snippetStart = Math.max(startIndex - 45, 0)
+  const snippetEnd = Math.min(startIndex + 45 + term.length, content.length)
 
   return content.substring(snippetStart, snippetEnd)
 }
@@ -86,33 +86,38 @@ function getHighlightedText(content: string, match: any): string {
     <ArchiveHero />
 
     <div class="px-8">
+
       <input
         v-model="search"
         placeholder="تلاش کریں"
         type="text"
-        class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-800 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-700 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-8 placeholder-zinc-900 dark:placeholder-zinc-200"
       >
 
       <div class="search-results">
 
     <div v-if="results.length > 0">
+
       <div
         v-for="result in results"
         :key="result.id"
-        class="result-item border-b py-4"
+        class="result-item pb-6 sm:pb-4"
       >
-        <h3 class="text-lg font-bold">
-          <a :href="result.id" class="text-blue-500 hover:underline">{{ result.title }}</a>
-        </h3>
-        <p class="text-sm text-gray-600">
-          ...{{ getHighlightedText(result.content, result.match) }}...
-        </p>
-        <p class="text-xs text-gray-500">{{ result.id }}</p>
+      
+        <NuxtLink :to= result.id><div class="inline-flex transform hover:scale-[1.1] ease-in-out duration-500">
+          <div class="text-lg text-zinc-800 dark:text-zinc-200 leading-[2.5rem]">
+            <div class="inline p-1">...</div>{{ getHighlightedText(result.content, result.match) }}<div class="inline p-1">...</div><span class="sm:p-4 p-2 pr-0 block sm:inline">({{ result.title }})</span>
+          </div>
+        </div></NuxtLink>
+
       </div>
+
     </div>
+
     <div v-else>
-      <p>No results found</p>
+      <p class="text-lg my-6">کچھ نہیں مل سکا</p>
     </div>
+
   </div>
 
     </div>
@@ -147,7 +152,7 @@ function getHighlightedText(content: string, match: any): string {
       </template>
     </ClientOnly>
 
-    <div class="flex space-x-6 font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;">
+    <div class="flex space-x-6 justify-center font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;" v-if="results.length < 1">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
         <Icon name="lucide:chevron-left" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber > 1 }" />
       </button>

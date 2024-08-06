@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { navbarData } from '../../data'
-
-</script>
-
 <template>
   <div class="py-5">
     <div class="flex px-6 justify-between mx-auto items-baseline ">
