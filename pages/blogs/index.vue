@@ -107,7 +107,7 @@ function getHighlightedText(content: string, match: any): string {
         v-model="search"
         placeholder="تلاش کریں"
         type="text"
-        class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-gray-200 dark:border-gray-700 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-8 placeholder-zinc-900 dark:placeholder-zinc-200"
+        class="block w-full md:w-6/12 text-xl bg-transparent rounded-2xl border-[1.5px] border-[#efebe9b8] dark:border-gray-700 focus:border-indigo-300 focus:border-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-8 placeholder:text-[#3E2723] placeholder:dark:text-zinc-300 "
       >
 
       <div class="search-results">
@@ -121,7 +121,7 @@ function getHighlightedText(content: string, match: any): string {
       >
       
         <NuxtLink :to= result.id><div class="inline-flex transform hover:scale-[1.1] ease-in-out duration-500">
-          <div class="text-lg text-zinc-800 dark:text-zinc-200 leading-[2.5rem]">
+          <div class="text-lg text-[#3E2723] dark:text-zinc-300 leading-[2.5rem]">
             <div class="inline p-1">...</div><div class="inline" v-html="getHighlightedText(result.content, result.match)"></div><div class="inline p-1">...</div><span class="sm:p-4 p-2 pr-0 block sm:inline">({{ result.title }})</span>
           </div>
         </div></NuxtLink>
@@ -141,7 +141,7 @@ function getHighlightedText(content: string, match: any): string {
     <ClientOnly>
       <div v-auto-animate class="my-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" v-if="!search && results.length < 1">
         <template v-for="post in paginatedData" :key="post.title">
-          <ArchiveCard
+          <BlogCard
             :path="post.path"
             :title="post.title"
             :date="post.date"
@@ -168,13 +168,13 @@ function getHighlightedText(content: string, match: any): string {
       </template>
     </ClientOnly>
 
-    <div class="flex space-x-6 justify-center font-Inter text-zinc-900 dark:text-zinc-300" style="direction: ltr;" v-if="!search && results.length < 1">
+    <div class="flex space-x-6 justify-center font-Inter text-[#3E2723] dark:text-zinc-300" style="direction: ltr;" v-if="!search && results.length < 1">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
-        <Icon name="lucide:chevron-left" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber > 1 }" />
+        <Icon name="lucide:chevron-left" size="23" :class="{ 'text-[#3E2723] dark:text-zinc-300': pageNumber > 1 }" />
       </button>
       <p>{{ pageNumber }} / {{ totalPage }}</p>
       <button :disabled="pageNumber >= totalPage" @click="onNextPageClick">
-        <Icon name="lucide:chevron-right" size="23" :class="{ 'text-zinc-900 dark:text-zinc-300': pageNumber < totalPage }" />
+        <Icon name="lucide:chevron-right" size="23" :class="{ 'text-[#3E2723] dark:text-zinc-300': pageNumber < totalPage }" />
       </button>
     </div>
     
