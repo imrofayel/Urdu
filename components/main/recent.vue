@@ -32,7 +32,7 @@ useHead({
 
 <template>
   <div class="pb-10 px-4">
-    <div class="flex flex-row items-center pt-5 pb-3 mb-2 text-[#6d4c41] dark:text-[#329fff]">
+    <div class="flex flex-row items-center pt-5 pb-3 mb-2 text-[#3E2723] dark:text-[#329fff]">
       <Icon name="lucide:bookmark" size="1.4em" class="relative top-1"/>
       <div class="inline p-1"></div>
       <h2 class="text-[29px]">

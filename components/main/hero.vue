@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="w-full items-center justify-center flex relative sm:-right-[100px] -right-[90px] text-[#6D4C41]">
+    <div class="w-full items-center justify-center flex relative sm:-right-[100px] -right-[90px] text-[#3E2723]">
 
-        <Icon name="lucide:binary" class="rotate-[10deg] relative sm:right-[420px] sm:-top-10 size-[40px] sm:size-[44px] -top-10 right-[320px] dark:text-[#B0BEC5]"></Icon>
+        <Icon name="lucide:binary" class="rotate-[10deg] relative sm:right-[420px] sm:-top-10 size-[40px] sm:size-[44px] dark:text-[#B0BEC5]"></Icon>
                 
         <Icon name="lucide:flame" class="rotate-[10deg] relative sm:right-[250px] sm:top-[65px] size-[38px] sm:size-[40px] top-[50px] right-[200px] dark:text-[#FF3D00]"></Icon>
 
