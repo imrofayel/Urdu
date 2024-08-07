@@ -22,10 +22,10 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <article class="group border-[1.5px] border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl shadow-sm text-zinc-900 dark:text-zinc-300">
+  <article class="group border-[1.5px] light--info border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl shadow-sm text-zinc-900 dark:text-zinc-300">
     <NuxtLink :to="path">
       <div class="space-y-3 p-6">
-        <h2 class="text-xl text-black dark:text-zinc-300 pb-1">
+        <h2 class="text-xl pb-1">
           {{ title }}
         </h2>
         <p class="text-ellipsis line-clamp-3 text-lg leading-loose">
@@ -35,3 +35,19 @@ withDefaults(defineProps<Props>(), {
     </NuxtLink>
   </article>
 </template>
+
+<style>
+
+.light--info {
+  color: #054d8d !important;
+  background-color: #e3f2fd2c;
+  border: 1px solid #bbdefb4e;
+}
+
+.dark .light--info {
+  color: #329fff !important;
+  background-color: rgba(0, 110, 255, 0.014);
+  border: 1px solid rgba(0, 21, 255, 0.055);
+}
+
+</style>

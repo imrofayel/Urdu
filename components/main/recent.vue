@@ -33,9 +33,9 @@ useHead({
 <template>
   <div class="pb-10 px-4">
     <div class="flex flex-row items-center pt-5 pb-3 mb-2">
-      <Icon name="mdi:star-three-points-outline" size="1.5em" class="text-black dark:text-zinc-300 relative top-1"/>
+      <Icon name="mdi:star-three-points-outline" size="1.5em" class="text-[#0a3459] dark:text-[#329fff] relative top-1"/>
       <div class="inline p-1"></div>
-      <h2 class="text-[29px] text-black dark:text-zinc-300">
+      <h2 class="text-[29px] text-[#0a3459] dark:text-[#329fff]">
         تازہ ترین تحاریر
       </h2>
     </div>
@@ -60,3 +60,7 @@ useHead({
     </div>
   </div>
 </template>
+
+<style>
+
+</style>

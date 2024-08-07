@@ -48,7 +48,7 @@ function typeUrdu(type: string){
 
 <template>
 
-<div :class="`${colorMode.value}--${type} prosed--${type}`" class="rounded-xl px-4 pt-2 my-2 md:mx-8">
+<div :class="`${colorMode.value}--${type} t--${type}`" class="rounded-xl px-4 pt-2 my-2 md:mx-8">
 
   <div>
     <icon
@@ -82,11 +82,11 @@ function typeUrdu(type: string){
   border: 1px solid rgba(49, 49, 49, 0.185);
 }
 
-.prosed--info p, h1, h2, h3, h4, h6 table {
+.t--info p {
   color: #0561b2;
 }
 
-.dark .prosed--info p, h1, h2, h3, h4, h6 table {
+.dark .t--info p {
   color: #329fff;
 }
 
@@ -102,11 +102,11 @@ function typeUrdu(type: string){
   border: 1px solid rgba(49, 32, 1, 0.215);
 }
 
-.prosed--warning p, h1, h2, h3, h4, h6 table {
+.t--warning p {
   color: #7e6203;
 }
 
-.dark .prosed--warning p, h1, h2, h3, h4, h6 table {
+.dark .t--warning p {
   color: #F9A825;
 }
 
@@ -122,11 +122,11 @@ function typeUrdu(type: string){
   border: 1px solid #013e1a22;
 }
 
-.prosed--success p, h1, h2, h3, h4, h6 table {
+.t--success p {
   color: #07ac4c;
 }
 
-.dark .prosed--success p, h1, h2, h3, h4, h6 table {
+.dark .t--success p {
   color: #54de5a;
 }
 
@@ -142,11 +142,11 @@ function typeUrdu(type: string){
   border: 1px solid #784a4a1a;
 }
 
-.prosed--danger p, h1, h2, h3, h4, h6 table {
+.t--danger p {
   color: #cc0a0a;
 }
 
-.dark .prosed--danger p, h1, h2, h3, h4, h6 table {
+.dark .t--danger p {
   color: #fc4444;
 }
 
