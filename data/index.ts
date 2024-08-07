@@ -8,7 +8,7 @@ export const footerData = {
 }
 
 export const homePage = {
-  title: 'اردو انسائیکلوپیڈیا میں خوش آمدید',
+  title: 'اردو کا پہلا فین ڈوم',
   description: 'آزاد دائرۃ المعارف جس میں کوئی بھی ترمیم کر سکتا ہے',
 }
 

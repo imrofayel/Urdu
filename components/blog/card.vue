@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <article class="group border-[1.5px] border-gray-200 dark:border-gray-900 m-2 overflow-hidden rounded-2xl shadow-sm text-zinc-900 dark:text-zinc-300">
+  <article class="group border-[1.5px] border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl shadow-sm text-zinc-900 dark:text-zinc-300">
     <NuxtLink :to="path">
       <div class="space-y-3 p-6">
         <h2 class="text-xl text-black dark:text-zinc-300 pb-1">
