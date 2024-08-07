@@ -39,7 +39,7 @@ withDefaults(defineProps<Props>(), {
 <style>
 
 .card {
-  color: #6d4c41 !important;
+  color: #3E2723 !important;
   background-color: #efebe91c;
   border: 1px solid #efebe9b8;
 }
