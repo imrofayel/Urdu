@@ -1,6 +1,6 @@
 <template>
   <div class="py-5">
-    <div class="flex px-6 justify-between mx-auto items-baseline text-[#5D4037] dark:text-zinc-300">
+    <div class="flex px-6 justify-between mx-auto items-baseline text-[#3E2723] dark:text-zinc-300">
       <ul class="flex items-baseline space-x-5">
         <li class="text-3xl">
           <NuxtLink to="/">

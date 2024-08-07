@@ -18,3 +18,7 @@ useHead({
   </main>
 </template>
 
+<style>
+
+</style>
+

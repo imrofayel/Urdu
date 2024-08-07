@@ -25,10 +25,10 @@ withDefaults(defineProps<Props>(), {
   <article class="group border-[1.5px] card border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl text-zinc-900 dark:text-zinc-300">
     <NuxtLink :to="path">
       <div class="space-y-3 p-6">
-        <h2 class="text-xl pb-1">
+        <h2 class="text-2xl pb-1">
           {{ title }}
         </h2>
-        <p class="text-ellipsis line-clamp-3 text-lg leading-loose">
+        <p class="text-ellipsis line-clamp-3 text-xl leading-loose">
           {{ description }}
         </p>
       </div>
