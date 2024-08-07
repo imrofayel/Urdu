@@ -11,9 +11,9 @@
 
         <Icon name="lucide:atom" color="#00C853" class="rotate-[18deg] relative sm:right-[185px] sm:-top-10 size-[36px] sm:size-[40px] -top-10 right-[145px]"></Icon>
 
-        <Icon name="lucide:clock" color="#512DA8" class="rotate-[14deg] relative sm:right-[420px] sm:top-14 size-[34px] sm:size-[38px] top-[50px] right-[300px]"></Icon>
+        <Icon name="lucide:clock" color="#0097A7" class="rotate-[14deg] relative sm:right-[420px] sm:top-14 size-[34px] sm:size-[38px] top-[50px] right-[300px]"></Icon>
         
-        <Icon name="lucide:drama" color="#7B1FA2" class="rotate-[12deg] relative sm:right-[445px] sm:-top-[38px] size-[38px] sm:size-[40px] -top-9 right-[310px]"></Icon>
+        <Icon name="lucide:drama" color="#651FFF" class="rotate-[12deg] relative sm:right-[445px] sm:-top-[38px] size-[38px] sm:size-[40px] -top-9 right-[310px]"></Icon>
 
         <h1 class="text-[#040d3f] dark:text-zinc-300 leading-loose text-[36px] sm:text-5xl my-20">
           سائنس، ٹیکنالوجی، تاریخ، فکشن
