@@ -21,6 +21,7 @@
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@primevue/nuxt-module": "^4.0.4",
+    "@stefanobartoletti/nuxt-social-share": "^1.0.0",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/core": "^10.9.0",
