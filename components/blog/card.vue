@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <article class="group border-[1.5px] light--info border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl shadow-sm text-zinc-900 dark:text-zinc-300">
+  <article class="group border-[1.5px] card border-gray-200 dark:border-gray-700 m-2 overflow-hidden rounded-xl text-zinc-900 dark:text-zinc-300">
     <NuxtLink :to="path">
       <div class="space-y-3 p-6">
         <h2 class="text-xl pb-1">
@@ -38,13 +38,13 @@ withDefaults(defineProps<Props>(), {
 
 <style>
 
-.light--info {
-  color: #054d8d !important;
-  background-color: #e3f2fd2c;
-  border: 1px solid #bbdefb4e;
+.card {
+  color: #6d4c41 !important;
+  background-color: #efebe91c;
+  border: 1px solid #efebe9b8;
 }
 
-.dark .light--info {
+.dark .card {
   color: #329fff !important;
   background-color: rgba(0, 110, 255, 0.014);
   border: 1px solid rgba(0, 21, 255, 0.055);

@@ -11,7 +11,7 @@ useHead({
 </script>
 
 <template>
-  <div class="bg-[#ffffff] dark:text-zinc-300 dark:bg-gray-950 blur-[0.3px]">
+  <div class="bg-[#FAFAFA] text-[#3E2723] dark:text-zinc-300 dark:bg-gray-950 blur-[0.3px]">
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />

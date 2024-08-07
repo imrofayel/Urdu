@@ -1,6 +1,6 @@
 <template>
   <div class="gd-container font-mehr">
-    <header class="fixed w-full bg-white dark:bg-gray-950 z-10">
+    <header class="fixed w-full z-10">
       <MainHeader />
     </header>
     <main>

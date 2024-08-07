@@ -8,7 +8,7 @@ function onClick(val: string) {
 </script>
 
 <template>
-  <div class="py-5 mt-5 text-zinc-900 dark:text-zinc-300">
+  <div class="py-5 mt-5 text-[#3E2723] dark:text-zinc-300">
     <div class="px-6 container max-w-5xl mx-auto">
       <div class="mt-5 text-center p-2 space-x-4 font-Inter" style="direction: ltr"><div class="inline">© 2024 Adam Rofayel.</div>
 

@@ -10,7 +10,7 @@ const links = articles?.body?.toc?.links || []
     <div
       class="mt-8 rounded-xl"
     >
-      <h1 class="text-[24px] pb-4 text-zinc-900 dark:text-zinc-300" style="direction: rtl;">
+      <h1 class="text-[24px] pb-4 text-[#3E2723] dark:text-zinc-300" style="direction: rtl;">
         فہرست
       </h1>
       

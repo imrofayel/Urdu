@@ -12,7 +12,7 @@ useHead({
 </script>
 
 <template>
-  <main class="text-black dark:text-zinc-300">
+  <main>
     <MainHero class="mb-10"/>
     <MainRecent class="md:m-6"/>
   </main>
