@@ -13,7 +13,6 @@ useHead({
 
 <template>
   <main>
-    <MainHero/>
     <MainRecent class="md:m-6"/>
   </main>
 </template>
