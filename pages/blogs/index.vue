@@ -99,7 +99,7 @@ function getHighlightedText(content: string, match: any): string {
 
   <main class="container max-w-5xl mx-auto">
 
-    <ArchiveHero />
+    <div class="text-3xl m-10">تلاش</div>
 
     <div class="px-8">
 
