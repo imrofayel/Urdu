@@ -8,7 +8,7 @@
 
     <div class="w-full items-center justify-center lg:flex relative text-[#3E2723]">
 
-        <h1 class="dark:text-zinc-300 leading-loose text-3xl sm:text-4xl lg:text-5xl lg:my-20 my-6">
+        <h1 class="dark:text-zinc-300 leading-loose text-3xl sm:text-4xl lg:text-5xl lg:my-20 my-2">
           سائنس، ٹیکنالوجی، تاریخ، فکشن
         </h1>
 
