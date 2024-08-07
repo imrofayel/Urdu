@@ -1,6 +1,7 @@
 # Nuxt dev/build outputs
 .output
 .nuxt
+.vscode
 # Node dependencies
 node_modules
 # System files
