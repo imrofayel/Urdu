@@ -30,7 +30,7 @@ useHead({
 </script>
 
 <template>
-  <main class="container mx-auto text-zinc-600">
+  <main class="container mx-auto text-[#3E2723] dark:text-zinc-300">
     <AuthorHero />
     <div class="flex flex-wrap px-6 mt-6 gap-3">
       <AuthorCard

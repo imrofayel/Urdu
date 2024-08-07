@@ -28,7 +28,7 @@ const { data } = await useAsyncData(`author-data-${author.value}`, () =>
 
 <template>
   <div>
-    <div class="p-6 my-4 mx-2 text-2xl md:text-3xl text-zinc-900 dark:text-zinc-300">
+    <div class="p-6 my-4 mx-2 text-2xl md:text-3xl text-[#3E2723] dark:text-zinc-300">
       <div class="inline">{{ author }} &ensp;&ensp;</div>
       <span class="inline-flex relative -top-[9px] text-[22px]">{{ data?.length }}</span>
     </div>
